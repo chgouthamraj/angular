@@ -127,6 +127,9 @@ b# Angular
 - syntax: `@Output() childEvent = new EventEmitter<string>();`<br/>
    - child component : `<app-test (childEvent)="message=$event" [parentData]="name"></app-test>`
   
+![localImage](./Images/components-interaction.png)
+
+  
 
 
   
