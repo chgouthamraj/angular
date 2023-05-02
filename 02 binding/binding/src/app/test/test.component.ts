@@ -34,7 +34,7 @@ import { Component } from '@angular/core';
     {{ greeting }}
 
     <input #myInput type="text" />
-    <button (click)="logMessage(myInput)">Log</button> <br /><br />
+    <button (click)="logMessage(myInput)">Log</button> <br />
 
     <input [(ngModel)]="userName" type="text" />
     {{ userName }} `,

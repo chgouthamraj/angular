@@ -1,4 +1,4 @@
-# Angular
+b# Angular
 - To create a project : `ng new project-name`
 - To create a component :`ng generate component component-name`
 - To run the project : `ng serve`
@@ -93,6 +93,29 @@
 - For example if a user has login form and fills out the values these values are added to the property where there is a change in property the views values should be updated
 - two way binding allows us to update the property and view the property at same time
 - it provides a directive `ngModel`
+
+## Structural directives
+- Structural directives let us add or remove HTML elements
+- eg : `ngIf`  `ngSwitch`  `ngFor`
+  
+- ngIf:- Assign a truthy value that conditionally renders the element and it    removes the element from DOM </br>
+    `<h2 *ngIf="true">code evolution</h2>`
+- ngIf various forms: 
+  - <div *ngIf="condition; else elseBlock"> and <ng-template #elseBlock>
+  - <div *ngIf="condition; then thenBlock else elseBlock"></div> (we will have two blocks with <ng-template> tag)   
+  
+- ngSwitch : we want to compare against multiple values
+- eg:- <some-element [ngSwitch]="color"></br>
+        <some-element *ngSwitchCase="'red'">You picked red color</some-element><br/>
+        <some-element *ngSwitchCase="'blue'">You picked blue color</some-element><br/>
+        <some-element *ngSwitchCase="'green'">You picked green color</some-element><br/>
+        <some-element *ngSwitchDefault>Pick again</some-element>
+      </some-element><br/>
+- ngFor:- Loops through the elements 
+   eg:- `<div *ngFor="let color of colors; index as i">
+          <h2>{{ i }} {{ color }}</h2>
+        </div>`
+
 
 
   
