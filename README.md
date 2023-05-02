@@ -116,6 +116,17 @@ b# Angular
           <h2>{{ i }} {{ color }}</h2>
         </div>`
 
+## component interactions
+- parent and child components interact with each other using `@input()` and `@output()` decorators
+- `@input()`: is used send data from parent to child component<br/>
+   - syntax: @Input() item = ''; (item is the value from parent component)<br/>
+   - import input from angular core (`@angular/core`)
+   - declare a property in child component and bind it to the custom tag of <br/>child component and access it in parent component by using @input()
+  
+- `@Output()` : A child component sends data to parent component using events we create and instance of EventEmitter and emit in the class and listens to the event in child component and pass it to parent component
+- syntax: `@Output() childEvent = new EventEmitter<string>();`<br/>
+   - child component : `<app-test (childEvent)="message=$event" [parentData]="name"></app-test>`
+  
 
 
   
