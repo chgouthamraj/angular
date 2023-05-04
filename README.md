@@ -116,7 +116,7 @@ b# Angular
           <h2>{{ i }} {{ color }}</h2>
         </div>`
 
-## component interactions
+## Component interactions
 - parent and child components interact with each other using `@input()` and `@output()` decorators
 - `@input()`: is used send data from parent to child component<br/>
    - syntax: @Input() item = ''; (item is the value from parent component)<br/>
@@ -129,10 +129,35 @@ b# Angular
   
 ![localImage](./Images/components-interaction.png)
 
-## pipes
+## Pipes
 - We can use pipes to transform strings, currency amounts, dates, and other data for display
 - eg : ```<h2>{{ 'Codevolution' | lowercase }}</h2>```
 - There are any built-in pipes in angular like DatePipe, CurrenyPipe, PercentPipe
+
+## Services
+- A class with a specific purpose
+  - 1)Share data across multiple components
+  - 2)implement appilication logic
+  - 3)external interaction like connecting to DB
+- Naming convention - `.service.ts`
+- We can use a service using Dependency Injection
+
+## Dependency Injection
+
+![localImage](./Images/DJ-1.png)
+
+- Dependency injection has a `injector` where we register all our dependencies
+
+![localImage](./Images/DJ-2.png)
+
+- We need to register a class at App module so that all the components can access the dependencies
+- First we need to create a service class
+- Then we need to register that service to the injector mostly at the App module
+- Then we can access the dependices of the injector by initializing them in the constructor and import that service
+
+ ![localImage](./Images/DJ-3.png) 
+
+ ![localImage](./Images/DJ-4.png)
 
 
   
