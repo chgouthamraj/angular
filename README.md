@@ -100,9 +100,9 @@ b# Angular
   
 - ngIf:- Assign a truthy value that conditionally renders the element and it    removes the element from DOM </br>
     `<h2 *ngIf="true">code evolution</h2>`
-- ngIf various forms: 
-  - <div *ngIf="condition; else elseBlock"> and <ng-template #elseBlock>
-  - <div *ngIf="condition; then thenBlock else elseBlock"></div> (we will have two blocks with <ng-template> tag)   
+- ngIf various forms: <br/>
+  ```<div *ngIf="condition; else elseBlock"> and <ng-template #elseBlock>```<br/>
+  ```<div *ngIf="condition; then thenBlock else elseBlock"></div>``` (we will have two blocks with <ng-template> tag)   
   
 - ngSwitch : we want to compare against multiple values
 - eg:- <some-element [ngSwitch]="color"></br>
@@ -128,6 +128,12 @@ b# Angular
    - child component : `<app-test (childEvent)="message=$event" [parentData]="name"></app-test>`
   
 ![localImage](./Images/components-interaction.png)
+
+## pipes
+- We can use pipes to transform strings, currency amounts, dates, and other data for display
+- eg : ```<h2>{{ 'Codevolution' | lowercase }}</h2>```
+- There are any built-in pipes in angular like DatePipe, CurrenyPipe, PercentPipe
+
 
   
 
