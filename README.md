@@ -154,14 +154,38 @@ b# Angular
 - First we need to create a service class
 - Then we need to register that service to the injector mostly at the App module
 - Then we can access the dependices of the injector by initializing them in the constructor and import that service
+  
+ ``` 
+ constructor(private _employeeService: EmployeeService) {}
+
+  ngOnInit() {
+    this.employees = this._employeeService.getEmployess();
+  }
+  ````
 
  ![localImage](./Images/DJ-3.png) 
 
  ![localImage](./Images/DJ-4.png)
 
-
+## http and observables
+- HTTP mechanism
   
+   ![localImage](./Images/http-1.png)
 
+#Observable:
+- A Sequence of items that arrive asynchronously over time.
+- Http call - single item that is `single item` is `Http response`
+  ![localImage](./Images/http-2.png)
+- This an http response that arrives asynchronously
+- The response that is returned by http service is observable.
+   
+  ![localImage](./Images/http-2.png)
+
+- Import `HttpClinet` module in App module and add it to imports
+- Declare it as a dependency in constructor of the service.
+- Now we need to make a http request and this request will return an observable and we need to cast this observable.eg: create an employee interface and we need `subscribe` to this observable in the component to get the data
+- we make use of `catch` to handle errors thrown by observable
+- error handling : first we to add catch operator on the observable and write a error handler to throw the exception out and in the components which subscribed to the observable we can get error  
 
   
 
